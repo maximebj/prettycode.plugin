@@ -1,3 +1,18 @@
+// Settings
+.ancb-small-input {
+	width: 80px;
+}
+
+.ancb-2-cols {
+	display: flex;
+	gap: 2em;
+
+	& > * {
+		flex: 1;
+	}
+}
+
+// Block
 .wp-block-create-block-code-block {
 	border: 1px dotted #f00;
 }

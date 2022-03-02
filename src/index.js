@@ -5,11 +5,11 @@ import './style.scss'
 import Edit from './edit'
 import Save from './save'
 
-registerBlockType('create-block/code-block', {
+registerBlockType('a-nice-code-block/code-block', {
 	attributes: {
 		language: {
 			type: 'string',
-			default: '',
+			default: aNiceCodeBlock.languages[0].slug,
 		},
 		file: {
 			type: 'string',
@@ -27,18 +27,17 @@ registerBlockType('create-block/code-block', {
 			type: 'integer',
 			default: 1,
 		},
-		alignment: {
-			type: 'string',
-		},
 		wrapLines: {
 			type: 'boolean',
 			default: true,
 		},
 		highlightStart: {
 			type: 'string',
+			default: '',
 		},
 		highlightEnd: {
 			type: 'string',
+			default: '',
 		}
 	},
 	edit: Edit,

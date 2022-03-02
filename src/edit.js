@@ -1,23 +1,31 @@
 import { __ } from '@wordpress/i18n'
 import { Fragment } from '@wordpress/element'
 
-import Toolbar from './toolbar'
 import Inspector from './inspector'
 import Block from './block'
 
 import './editor.scss'
 
-export default function Edit( { attributes, setAttributes } ) {
+export default function Edit( props ) {
 
-	const { alignment, file, showLines, startLine, wrapLines, highlightStart, highlightEnd } = attributes
+	const { attributes, setAttributes } = props
+	const { language, file, showLines, startLine, wrapLines, highlightStart, highlightEnd } = attributes
 
-	const entry = ''
+	// Get current language object
+	const getLanguages = () => {
+		let entry = _.find( aNiceCodeBlock.languages, { slug: language } )
+		if( _.isUndefined( entry ) ) {
+			return aNiceCodeBlock.languages[0]
+		}
+		return entry
+	}
+
+	const languageObject = getLanguages()
 
 	return (
 		<Fragment>
-			<Toolbar { ...{ alignment, setAttributes } } />
-			<Inspector { ...{ file, showLines, startLine, wrapLines, highlightStart, highlightEnd, setAttributes, entry } } />
-			<Block { ...{ attributes, setAttributes, entry } } />
+			<Inspector { ...{ file, showLines, startLine, wrapLines, highlightStart, highlightEnd, setAttributes, languageObject } } />
+			<Block { ...{ attributes, setAttributes, languageObject } } />
 		</Fragment>
 	);
 }
