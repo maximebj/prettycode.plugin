@@ -3,7 +3,7 @@ import { useBlockProps } from '@wordpress/block-editor'
 
 export default function Block( props ) {
 
-	const { attributes, setAttributes } = props
+	const { attributes, setAttributes, languageObject } = props
 
 	return (
 		<p {...useBlockProps()}>

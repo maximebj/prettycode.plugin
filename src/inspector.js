@@ -4,36 +4,36 @@ import { PanelBody, TextControl, ToggleControl, SelectControl } from '@wordpress
 
 export default function Inspector( props ) {
 
-	const { file, showLines, startLine, wrapLines, highlightStart, highlightEnd, setAttributes, languageObject } = props
+	const { file, showLines, startLine, wrapLines, highlightStart, highlightEnd, setAttributes, language } = props
 
 	return (
 		<InspectorControls>
 
-      <PanelBody title={ __( 'Settings', 'a-nice-code-block' ) }>
+      <PanelBody title={ __('Settings', 'a-nice-code-block') }>
 
 				<SelectControl
-					value={ { value: languageObject.slug, label: languageObject.label } }
-					label={ __('Language', 'a-nice-code-block' ) }
+					value={ language }
+					label={ __('Language', 'a-nice-code-block') }
 					options={ aNiceCodeBlock.languages }
-					onChange={ language => setAttributes( { language: language.slug } ) }
+					onChange={ ( language ) => setAttributes( { language } )  }
 				/>
 
 				<TextControl
 					type="text"
-					label={ __('File name', 'a-nice-code-block' ) }
+					label={ __('File name', 'a-nice-code-block') }
 					onChange={ file => setAttributes( { file } ) }
-					placeHolder={ __(' /my/optionnal/file/name.ext', 'a-nice-code-block' ) }
+					placeHolder={ __('/my/optionnal/file/name.ext', 'a-nice-code-block') }
 					value={ file }
 				/>
 
 				<ToggleControl
-					label={ __( 'Auto wrap long lines', 'a-nice-code-block' ) }
+					label={ __('Auto wrap long lines', 'a-nice-code-block') }
 					checked={ wrapLines }
 					onChange={ () => setAttributes( { wrapLines: ! wrapLines } ) }
 				/>
 
 				<ToggleControl
-					label={ __( 'Show lines numbers', 'a-nice-code-block' ) }
+					label={ __('Show lines numbers', 'a-nice-code-block') }
 					checked={ showLines }
 					onChange={ () => setAttributes( { showLines: ! showLines } ) }
 				/>
@@ -41,7 +41,7 @@ export default function Inspector( props ) {
 				{ showLines && (
 					<TextControl
 						type="number"
-						label={ __('Start line', 'a-nice-code-block' ) }
+						label={ __('Start line', 'a-nice-code-block') }
 						onChange={ startLine => setAttributes( { startLine: parseInt(startLine) } ) }
 						value={ startLine }
 						className='ancb-small-input'

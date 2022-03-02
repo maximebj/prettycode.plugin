@@ -11,20 +11,19 @@ export default function Edit( props ) {
 	const { attributes, setAttributes } = props
 	const { language, file, showLines, startLine, wrapLines, highlightStart, highlightEnd } = attributes
 
-	// Get current language object
-	const getLanguages = () => {
-		let entry = _.find( aNiceCodeBlock.languages, { slug: language } )
+	// Get current language object from value
+	const getLanguageObject = () => {
+		let entry = _.find( aNiceCodeBlock.languages, { value: language } )
 		if( _.isUndefined( entry ) ) {
 			return aNiceCodeBlock.languages[0]
 		}
 		return entry
 	}
-
-	const languageObject = getLanguages()
+	const languageObject = getLanguageObject()
 
 	return (
 		<Fragment>
-			<Inspector { ...{ file, showLines, startLine, wrapLines, highlightStart, highlightEnd, setAttributes, languageObject } } />
+			<Inspector { ...{ file, showLines, startLine, wrapLines, highlightStart, highlightEnd, setAttributes, language } } />
 			<Block { ...{ attributes, setAttributes, languageObject } } />
 		</Fragment>
 	);
