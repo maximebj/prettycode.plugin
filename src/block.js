@@ -6,21 +6,13 @@ export default function Block( props ) {
 	const { attributes, setAttributes } = props
 	const { language, theme, file, showLines, startLine, wrapLines, highlightStart, highlightEnd } = attributes
 
-	// Get current language object from value
-	const getLanguageObject = () => {
-		let entry = _.find( aNiceCodeBlock.languages, { value: language } )
-		if( _.isUndefined( entry ) ) {
-			return aNiceCodeBlock.languages[0]
-		}
-		return entry
-	}
-	const languageObject = getLanguageObject()
+	const languageObject = _.find( aNiceCodeBlock.languages, { value: language } )
 
 	return (
 		<div {...useBlockProps()}>
 			<link rel='stylesheet' href={ `../wp-content/plugins/a-nice-code-block/codemirror/themes/${theme}.css` } type='text/css' />
 			<header className="ancb-header">
-				<div className={ `ancb-lang is-lang-${language}` }>
+				<div className={ `ancb-lang is-lang-${languageObject.value}` }>
 					{ languageObject.label }
 				</div>
 				<div className="ancb-file">
