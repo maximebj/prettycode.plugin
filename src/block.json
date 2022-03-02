@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/code-block",
+	"version": "1.0",
+	"title": "A Nice Code Block",
+	"category": "text",
+	"icon": "media-code",
+	"description": "A code syntax highlighting block for your snippets of all major languages.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "code-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
