@@ -9,7 +9,11 @@ registerBlockType('a-nice-code-block/code-block', {
 	attributes: {
 		language: {
 			type: 'string',
-			default: aNiceCodeBlock.languages[0].slug,
+			default: aNiceCodeBlock.languages[0].value,
+		},
+		theme: {
+			type: 'string',
+			default: aNiceCodeBlock.themes[0].value,
 		},
 		file: {
 			type: 'string',

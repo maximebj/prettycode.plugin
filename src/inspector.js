@@ -4,7 +4,8 @@ import { PanelBody, TextControl, ToggleControl, SelectControl } from '@wordpress
 
 export default function Inspector( props ) {
 
-	const { file, showLines, startLine, wrapLines, highlightStart, highlightEnd, setAttributes, language } = props
+	const { attributes, setAttributes } = props
+	const { language, theme, file, showLines, startLine, wrapLines, highlightStart, highlightEnd } = attributes
 
 	return (
 		<InspectorControls>
@@ -16,6 +17,13 @@ export default function Inspector( props ) {
 					label={ __('Language', 'a-nice-code-block') }
 					options={ aNiceCodeBlock.languages }
 					onChange={ ( language ) => setAttributes( { language } )  }
+				/>
+
+				<SelectControl
+					value={ theme }
+					label={ __('Theme', 'a-nice-code-block') }
+					options={ aNiceCodeBlock.themes }
+					onChange={ ( theme ) => setAttributes( { theme } )  }
 				/>
 
 				<TextControl

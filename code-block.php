@@ -8,7 +8,7 @@
  * Author:            MaximeBJ
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       code-block
+ * Text Domain:       a-nice-code-block
  *
  * @package           create-block
  */
@@ -17,7 +17,12 @@ defined( 'ABSPATH' ) || exit;
 
 class ANiceBlockCode
 {
-	public function run(): void
+	/**
+   * Registrer Hooks
+	 *
+	 * @return void
+	 */
+	public function registerHooks(): void
 	{
 		add_action( 'init', [ $this, 'registerBlocks' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'sentDataToJS' ] );
@@ -122,6 +127,7 @@ class ANiceBlockCode
 	protected function getThemesList(): array
 	{
 		$themes = [
+			[ 'value' => 'hopscotch' , 'label' => 'Hopscotch' ],
 			[ 'value' => '3024-day' , 'label' => '3024 Day' ],
 			[ 'value' => '3024-night' , 'label' => '3024 Night' ],
 			[ 'value' => 'abcdef' , 'label' => 'ABCDEF' ],
@@ -141,7 +147,6 @@ class ANiceBlockCode
 			[ 'value' => 'elegant' , 'label' => 'Elegant' ],
 			[ 'value' => 'erlang-dark' , 'label' => 'Erlang Dark' ],
 			[ 'value' => 'gruvbox-dark' , 'label' => 'Gruvbox Dark' ],
-			[ 'value' => 'hopscotch' , 'label' => 'Hopscotch' ],
 			[ 'value' => 'icecoder' , 'label' => 'Icecoder' ],
 			[ 'value' => 'idea' , 'label' => 'Idea' ],
 			[ 'value' => 'isotope' , 'label' => 'Isotope' ],
@@ -183,4 +188,4 @@ class ANiceBlockCode
 	}
 }
 
-(new ANiceBlockCode)->run();
+(new ANiceBlockCode)->registerHooks();
