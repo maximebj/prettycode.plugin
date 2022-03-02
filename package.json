@@ -16,5 +16,8 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^22.0.1"
+	},
+	"dependencies": {
+		"react-codemirror2-react-17": "^1.0.0"
 	}
 }

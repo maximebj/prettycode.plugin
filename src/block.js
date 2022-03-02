@@ -1,12 +1,25 @@
 import { __ } from '@wordpress/i18n'
 import { useBlockProps } from '@wordpress/block-editor'
+import { UnControlled as CodeMirror } from 'react-codemirror2-react-17'
+
+// Require langs for CodeMirror
+aNiceCodeBlock.languages.map( lang => {
+  if ( lang.mode != '' ) {
+    require(`codemirror/mode/${lang.mode}/${lang.mode}`)
+  }
+} )
+
+// Addons
+require(`codemirror/addon/edit/matchbrackets`)
 
 export default function Block( props ) {
 
 	const { attributes, setAttributes } = props
-	const { language, theme, file, showLines, startLine, wrapLines, highlightStart, highlightEnd } = attributes
+	const { language, theme, file, source, showLines, startLine, wrapLines, highlightStart, highlightEnd } = attributes
 
 	const languageObject = _.find( aNiceCodeBlock.languages, { value: language } )
+
+	let provSource = '<div class="truc">Je suis une div</div>'
 
 	return (
 		<div {...useBlockProps()}>
@@ -20,10 +33,10 @@ export default function Block( props ) {
 				</div>
 			</header>
 
-			{/* <CodeMirror
-				value={source}
+			<CodeMirror
+				value={provSource}
 				onChange={ source => setAttributes( { source } ) }
-				options={
+				options={{
 					lineNumbers: showLines,
 					theme: theme,
 					firstLineNumber: startLine,
@@ -32,8 +45,8 @@ export default function Block( props ) {
 					tabSize: 4,
 					matchBrackets: true,
 					lineWrapping: wrapLines,
-				}
-			/> */}
+				}}
+			/>
 		</div>
 	);
 }

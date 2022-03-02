@@ -1,3 +1,16 @@
+// CodeMirror
+@import "../codemirror/codemirror.css";
+
+.CodeMirror pre {
+  line-height: 24px;
+}
+
+// Block
+.wp-block[data-align="full"] .wp-block-a-nice-code-block-code-block {
+  border-radius: 0;
+}
+
+
 // Settings
 .ancb-small-input {
 	width: 80px;
@@ -10,9 +23,4 @@
 	& > * {
 		flex: 1;
 	}
-}
-
-// Block
-.wp-block-create-block-code-block {
-	border: 1px dotted #f00;
 }
