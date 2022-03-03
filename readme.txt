@@ -6,42 +6,42 @@ Stable tag:        1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block written with ESNext standard and JSX support – build step required.
+Code highlighting made simple, for the WordPress editor.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+The prettiest syntax highlighting block for the WordPress editor.
+Live edit your code snippets in the admin with bracket matching, customize colors with more thant 50 themes (Base16, Monokai, Material, Zenburn, Hopscotch...).
+Compatible with major languages: HTML, CSS, JS, JSX, Stylus, Sass, PHP, Python, C, C++, C#, Java, XML, Shell, JSON, Go, Swift...
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+This block uses CodeMirror. You may have seen this block before on the Advanced Gutenberg Blocks plugins few years ago. It's now an updated and standalone block.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/code-block` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-
+1. Upload the plugin files to the `/wp-content/plugins/a-nice-code-block` directory, or install the plugin through the WordPress plugins screen directly.
+2. Activate the plugin through the 'Plugins' screen in WordPress
+3. Go to a post and click on 'Add block'
+4. Search for 'A Nice Code block'
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Which languages are available? =
 
-An answer to that question.
+All major language are available: HTML, CSS, JS, JSX, Stylus, Sass, PHP, Python, C, C++, C#, Java, XML, Shell, JSON, Go, Swift...
 
-= What about foo bar? =
+= Can I add more languages ? =
 
-Answer to foo bar dilemma.
+Yes, by using the filter `a_nice_code_block_languages_list`.
+
+= Can I customize the appearance? =
+
+Sure! You have access to 50+ dark and light themes like Base16, Monokai, Material, Zenburn, Hopscotch...
+
+= Can I contribute? =
+
+Yep! The public repository is right here: https://github.com/maximebj/codeblock.plugin
 
 == Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
 
 == Changelog ==
 
@@ -50,10 +50,10 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Third Party ==
 
-This plugins uses some third party libraries.
+This plugins uses some third party libraries:
 
 - WordPress create-block by gziolo - https://www.npmjs.com/package/@wordpress/create-block
 - CodeMirror - https://github.com/codemirror/CodeMirror
 - react-codemirror2 by scniro - https://github.com/scniro/react-codemirror2
 
-Thanks to their respective creators
+A big thanks to their respective creators and maintainers!

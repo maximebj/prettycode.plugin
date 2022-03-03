@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       A Nice Code Block • Syntax highlighting with CodeMirror
- * Description:       Code highlighting made simple, for the WordPress editor.
+ * Description:       Code snippets highlighting made simple, for the WordPress editor.
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Version:           1.0
