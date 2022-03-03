@@ -1,4 +1,4 @@
-<div class="wp-block-a-nice-code-block-code-block<?php echo $align; ?><?php echo $customClass; ?>">
+<div class="wp-block-a-nice-code-block-code-block <?php echo $align; ?> <?php echo $customClass; ?>">
   <header class="ancb-header">
     <div class="ancb-lang is-lang-<?php echo $lang_slug; ?>">
       <?php echo $lang_label; ?>

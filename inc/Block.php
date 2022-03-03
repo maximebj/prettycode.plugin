@@ -54,6 +54,7 @@ class Block
 		$source      = $attributes['source'] 		?? __('No code to display', Plugin::SLUG );
 		$file 		   = $attributes['file'] 			?? '';
 		$language    = $attributes['language']  ?? 'html';
+		$theme    	 = $attributes['theme'] 	  ?? 'hopscotch';
 		$startLine   = $attributes['startLine'] ?? 1;
 		$showLines   = $attributes['showLines'] ?? true;
 		$wrapLines   = $attributes['wrapLines'] ?? true;
@@ -65,11 +66,8 @@ class Block
 
 		# Get alignment
 		if( $align !== '' ) {
-			$align = ' align' . $align;
+			$align = 'align' . $align;
 		}
-
-		# Get theme
-		$theme = 'hopscotch'; // TODO
 
 		# Get language Label and Mode
 		$languages = Languages::getLanguagesList();
