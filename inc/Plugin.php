@@ -1,0 +1,33 @@
+<?php
+
+namespace ANiceBlockCode;
+
+defined( 'ABSPATH' ) || exit;
+
+abstract class Plugin
+{
+	const SLUG    = 'a-nice-code-block';
+  const VERSION = '1.0';
+
+	/**
+   * Get Plugin path to directory
+	 *
+	 * @return string
+	 */
+	public static function path(): string
+	{
+		return plugin_dir_path( __DIR__ );
+	}
+
+
+	/**
+   * Get Plugin URL to directory
+	 *
+	 * @return string
+	 */
+	public static function URL(): string
+	{
+		return plugin_dir_url( __DIR__ );
+	}
+
+}

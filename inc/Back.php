@@ -3,6 +3,7 @@
 namespace ANiceBlockCode;
 
 use ANiceBlockCode\Languages;
+use ANiceBlockCode\Plugin;
 use ANiceBlockCode\Themes;
 
 defined( 'ABSPATH' ) || exit;
@@ -16,24 +17,8 @@ class Back
 	 */
 	public function registerHooks(): void
 	{
-		add_action( 'init', [ $this, 'registerBlocks' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, 'sentDataToJS' ] );
 		add_filter( 'no_texturize_tags', [ $this, 'doNotTexturizeTags' ] );
-	}
-
-
-	/**
-   * Registrer Block
-	 *
-	 * Source is in /src/ folder and built files in /build/ folder
-	 * Run `npm start` to start compiling files
-	 * Run `npm run build` to build files
-	 *
-	 * @return void
-	 */
-	public function registerBlocks(): void
-	{
-		register_block_type( plugin_dir_path( __DIR__ ) . '/build' );
 	}
 
 
