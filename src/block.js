@@ -1,6 +1,6 @@
 import { __ } from '@wordpress/i18n'
 import { useBlockProps } from '@wordpress/block-editor'
-import { UnControlled as CodeMirror } from 'react-codemirror2'
+import { Controlled as CodeMirror } from 'react-codemirror2'
 
 // Require langs for CodeMirror
 aNiceCodeBlock.languages.map( lang => {
@@ -31,7 +31,7 @@ export default function Block( props ) {
 
 			<CodeMirror
 				value={source}
-				onChange={(editor, data, source) => setAttributes( { source } ) }
+				onBeforeChange={(editor, data, source) => setAttributes( { source } ) }
 				options={{
 					lineNumbers: showLines,
 					theme: theme,
@@ -41,8 +41,9 @@ export default function Block( props ) {
 					tabSize: 4,
 					matchBrackets: true,
 					lineWrapping: wrapLines,
+					scrollbarStyle: null,
 				}}
 			/>
 		</div>
-	);
+	)
 }

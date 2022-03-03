@@ -45,11 +45,15 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Changelog ==
 
-= 0.1.0 =
-* Release
+= 1.0 =
+* Initial release
 
-== Arbitrary section ==
+== Third Party ==
 
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+This plugins uses some third party libraries.
+
+- WordPress create-block by gziolo - https://www.npmjs.com/package/@wordpress/create-block
+- CodeMirror - https://github.com/codemirror/CodeMirror
+- react-codemirror2 by scniro - https://github.com/scniro/react-codemirror2
+
+Thanks to their respective creators
