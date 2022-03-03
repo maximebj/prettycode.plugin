@@ -5,7 +5,7 @@ import { PanelBody, TextControl, ToggleControl, SelectControl } from '@wordpress
 export default function Inspector( props ) {
 
 	const { attributes, setAttributes } = props
-	const { language, theme, file, showLines, startLine, wrapLines, highlightStart, highlightEnd } = attributes
+	const { language, theme, file, showLines, startLine, wrapLines } = attributes
 
 	return (
 		<InspectorControls>
@@ -56,26 +56,6 @@ export default function Inspector( props ) {
 						min="1"
 					/>
 				) }
-
-				<div class="ancb-2-cols">
-					<TextControl
-						type="number"
-						label={ __('Highlight Lines', 'a-nice-code-block' ) }
-						onChange={ highlightStart => setAttributes( { highlightStart } ) }
-						placeHolder={ __('Start line', 'a-nice-code-block' ) }
-						value={ highlightStart }
-						min="1"
-					/>
-
-					<TextControl
-						type="number"
-						label="&nbsp;"
-						onChange={ highlightEnd => setAttributes( { highlightEnd } ) }
-						placeHolder={ __('End line', 'a-nice-code-block' ) }
-						value={ highlightEnd }
-						min="1"
-					/>
-        </div>
 
 			</PanelBody>
 

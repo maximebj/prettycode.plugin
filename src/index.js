@@ -34,14 +34,6 @@ registerBlockType('a-nice-code-block/code-block', {
 		wrapLines: {
 			type: 'boolean',
 			default: true,
-		},
-		highlightStart: {
-			type: 'string',
-			default: '',
-		},
-		highlightEnd: {
-			type: 'string',
-			default: '',
 		}
 	},
 	edit: Edit,

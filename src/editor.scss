@@ -15,12 +15,3 @@
 .ancb-small-input {
 	width: 80px;
 }
-
-.ancb-2-cols {
-	display: flex;
-	gap: 2em;
-
-	& > * {
-		flex: 1;
-	}
-}
