@@ -2,7 +2,6 @@
 
 namespace ANiceBlockCode;
 
-use ANiceBlockCode\Languages;
 use ANiceBlockCode\Plugin;
 
 defined( 'ABSPATH' ) || exit;
@@ -30,12 +29,32 @@ class Front
 	 */
 	public function loadFrontAssets(): void
 	{
+		# No need to load assets if blocks are not used in the post
 		if( ! has_block( 'a-nice-code-block/code-block' ) ) {
 			return;
 		}
 
+		# Themes and languages to load
+		$themes = [];
+		$languages = [];
+
 		# Get Post content
-		$content = get_post();
+		$post = get_post();
+
+		# Parse blocks
+		$blocks = parse_blocks( $post->post_content );
+
+		# Get themes and languages to load
+    foreach( $blocks as $block ) {
+			if( $block['blockName'] !== 'a-nice-code-block/code-block' ) { continue; }
+
+			$themes[] = $block['attrs']['theme'] ?? 'hopscotch';
+			$languages[] = $block['attrs']['language'] ?? 'xml';
+    }
+
+		# Ensure unique values
+		$themes = array_unique( $themes );
+		$languages = array_unique( $languages );
 
 		# CodeMirror Stylesheet
 		wp_enqueue_style(
@@ -46,11 +65,6 @@ class Front
 		);
 
 		# CodeMirror Themes
-		$regex = "#<!-- wp:a-nice-code-block/code-block {([^\>]+?)?\"theme\":\"(.*?)\"#";
-		preg_match_all( $regex, $content->post_content, $matches );
-		$themes = $matches[2];
-		$themes[] = 'hopscotch'; # Add default theme to not miss it (not in attributes if selected because default value)
-
 		foreach( $themes as $theme ) {
 			wp_enqueue_style(
 				Plugin::SLUG . "-code-mirror-theme-$theme",
@@ -76,23 +90,8 @@ class Front
 		);
 
 		# CodeMirror Languages
-		## First: get content and fetch used languages
-		$regex = "#<!-- wp:a-nice-code-block/code-block {([^\>]+?)?\"language\":\"(.*?)\"#";
-		preg_match_all( $regex, $content->post_content, $matches );
-		$langs = $matches[2];
-
-		## Second: convert languages to modes
-		$languages = Languages::getLanguagesList();
-		$modes = [ 'xml' ]; # XML is often required
-
-		foreach( $langs as $lang ) {
-			$key = array_search( $lang, array_column( $languages, 'value' ) );
-			$modes[] = $languages[$key]['mode'];
-		}
-		$modes = array_unique( $modes );
-
 		## Some languages needs some addons first
-		if( count( array_intersect( ['rust'] , $modes ) ) > 0 ) {
+		if( count( array_intersect( ['rust'] , $languages ) ) > 0 ) {
 			wp_enqueue_script(
 				Plugin::SLUG . '-code-mirror-simplemode',
 				Plugin::URL() . 'codemirror/addons/mode/simple.js',
@@ -102,10 +101,10 @@ class Front
 		}
 
 		## Then: load dependencies according to languages used
-		foreach( $modes as $mode ) {
+		foreach( $languages as $language ) {
 			wp_enqueue_script(
-				Plugin::SLUG . "-code-mirror-$mode",
-				Plugin::URL() . "codemirror/modes/$mode/$mode.js",
+				Plugin::SLUG . "-code-mirror-mode-$language",
+				Plugin::URL() . "codemirror/modes/$language/$language.js",
 				[ Plugin::SLUG . "-code-mirror" ],
 				Plugin::VERSION
 			);
@@ -113,7 +112,7 @@ class Front
 
 		## Finally: load additionnal dependencies needed for some languages
 		### C-Like
-		if ( count( array_intersect( ['php'] , $modes ) ) > 0 ) {
+		if ( count( array_intersect( ['php'] , $languages ) ) > 0 ) {
 			wp_enqueue_script(
 				Plugin::SLUG . '-code-mirror-clike',
 				Plugin::URL() . 'codemirror/modes/clike/clike.js',
@@ -123,7 +122,7 @@ class Front
 		}
 
 		### Front End mixed
-		if( count( array_intersect( ['php', 'xml', 'twig', 'javascript', 'jsx'] , $modes ) ) > 0 ) {
+		if( count( array_intersect( ['php', 'xml', 'twig', 'javascript', 'jsx'] , $languages ) ) > 0 ) {
 			wp_enqueue_script(
 				Plugin::SLUG . '-code-mirror-htmlmixed',
 				Plugin::URL() . 'codemirror/modes/htmlmixed/htmlmixed.js',
