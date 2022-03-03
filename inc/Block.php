@@ -51,7 +51,7 @@ class Block
 	public function renderBlock( $attributes ): string
 	{
 		# Default values
-		$source      = $attributes['source'] 		?? __('No code to display', Plugin::SLUG );
+		$source      = $attributes['source'] 		?? __( 'No code to display', Plugin::SLUG );
 		$file 		   = $attributes['file'] 			?? '';
 		$language    = $attributes['language']  ?? 'html';
 		$theme    	 = $attributes['theme'] 	  ?? 'hopscotch';
