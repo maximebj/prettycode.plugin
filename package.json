@@ -1,6 +1,6 @@
 {
 	"name": "prettycode",
-	"version": "1.0",
+	"version": "1.0.0",
 	"description": "A code syntax highlighting block for your snippets of all major languages.",
 	"author": "Maxime BJ • Captain WP",
 	"license": "GPL-2.0-or-later",
