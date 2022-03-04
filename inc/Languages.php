@@ -1,6 +1,6 @@
 <?php
 
-namespace ANiceBlockCode;
+namespace PrettyCode;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -43,7 +43,6 @@ abstract class Languages
 			[ 'value' => "plain", 'mode' => '', 'label' => 'Plain Text' ],
 		];
 
-		return apply_filters( 'a_nice_code_block_languages_list', $languages );
+		return apply_filters( 'prettycode_languages_list', $languages );
 	}
-
 }

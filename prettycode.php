@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       A Nice Code Block • Syntax highlighting with CodeMirror
+ * Plugin Name:       PrettyCode • Syntax highlighting with CodeMirror
  * Description:       Code snippets highlighting made simple, for the WordPress editor.
  * Requires at least: 5.8
  * Requires PHP:      7.0
@@ -8,14 +8,14 @@
  * Author:            Maxime BJ • Captain WP
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       a-nice-code-block
+ * Text Domain:       prettycode
  *
  * @package           create-block
  */
 
 defined( 'ABSPATH' ) || exit;
 
-class ANiceBlockCode
+class PrettyCode
 {
 	public function run()
 	{
@@ -28,10 +28,10 @@ class ANiceBlockCode
 		require_once __DIR__ . '/inc/Block.php';
 
 		# Init Classes
-		(new ANiceBlockCode\Back)->registerHooks();
-		(new ANiceBlockCode\Front)->registerHooks();
-		(new ANiceBlockCode\Block)->registerHooks();
+		(new PrettyCode\Back)->registerHooks();
+		(new PrettyCode\Front)->registerHooks();
+		(new PrettyCode\Block)->registerHooks();
 	}
 }
 
-(new ANiceBlockCode)->run();
+(new PrettyCode)->run();

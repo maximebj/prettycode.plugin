@@ -3,7 +3,7 @@ import { useBlockProps } from '@wordpress/block-editor'
 import { Controlled as CodeMirror } from 'react-codemirror2'
 
 // Require langs for CodeMirror
-aNiceCodeBlock.languages.map( lang => {
+prettyCode.languages.map( lang => {
   if ( lang.mode != '' ) {
     require(`codemirror/mode/${lang.mode}/${lang.mode}`)
   }
@@ -15,16 +15,16 @@ export default function Block( props ) {
 	const { attributes, setAttributes } = props
 	const { language, theme, file, source, showLines, startLine, wrapLines } = attributes
 
-	const languageObject = _.find( aNiceCodeBlock.languages, { value: language } )
+	const languageObject = _.find( prettyCode.languages, { value: language } )
 
 	return (
 		<div {...useBlockProps()}>
-			<link rel='stylesheet' href={ `../wp-content/plugins/a-nice-code-block/codemirror/themes/${theme}.css` } type='text/css' />
-			<header className="ancb-header">
-				<div className={ `ancb-lang is-lang-${languageObject.value}` }>
+			<link rel='stylesheet' href={ `../wp-content/plugins/prettycode/codemirror/themes/${theme}.css` } type='text/css' />
+			<header className="prettycode-header">
+				<div className={ `prettycode-lang is-lang-${languageObject.value}` }>
 					{ languageObject.label }
 				</div>
-				<div className="ancb-file">
+				<div className="prettycode-file">
 					{file}
 				</div>
 			</header>

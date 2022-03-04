@@ -1,8 +1,8 @@
 <?php
 
-namespace ANiceBlockCode;
+namespace PrettyCode;
 
-use ANiceBlockCode\Plugin;
+use PrettyCode\Plugin;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -30,7 +30,7 @@ class Front
 	public function loadFrontAssets(): void
 	{
 		# No need to load assets if blocks are not used in the post
-		if( ! has_block( 'a-nice-code-block/code-block' ) ) {
+		if( ! has_block( 'prettycode/code' ) ) {
 			return;
 		}
 
@@ -46,7 +46,7 @@ class Front
 
 		# Get themes and languages to load
     foreach( $blocks as $block ) {
-			if( $block['blockName'] !== 'a-nice-code-block/code-block' ) { continue; }
+			if( $block['blockName'] !== 'prettycode/code' ) { continue; }
 
 			$themes[] = $block['attrs']['theme'] ?? 'hopscotch';
 			$languages[] = $block['attrs']['language'] ?? 'xml';

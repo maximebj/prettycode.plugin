@@ -1,12 +1,12 @@
 <?php
 
-namespace ANiceBlockCode;
+namespace PrettyCode;
 
 defined( 'ABSPATH' ) || exit;
 
 abstract class Plugin
 {
-	const SLUG    = 'a-nice-code-block';
+	const SLUG    = 'prettycode';
   const VERSION = '1.0';
 
 	/**
@@ -29,5 +29,4 @@ abstract class Plugin
 	{
 		return plugin_dir_url( __DIR__ );
 	}
-
 }

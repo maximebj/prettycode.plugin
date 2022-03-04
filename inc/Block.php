@@ -1,9 +1,9 @@
 <?php
 
-namespace ANiceBlockCode;
+namespace PrettyCode;
 
-use ANiceBlockCode\Languages;
-use ANiceBlockCode\Plugin;
+use PrettyCode\Languages;
+use PrettyCode\Plugin;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -82,7 +82,7 @@ class Block
 		ob_start();
 
 		# Get template
-		include apply_filters( 'a_nice_code_block_template', Plugin::path() . 'templates/code.php' );
+		include apply_filters( 'prettycode_template', Plugin::path() . 'templates/code.php' );
 
 		$output = ob_get_contents();
 		ob_end_clean();

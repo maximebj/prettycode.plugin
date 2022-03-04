@@ -18,10 +18,10 @@ This block uses CodeMirror. You may have seen this block before on the Advanced 
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/a-nice-code-block` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/prettycode` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. Go to a post and click on 'Add block'
-4. Search for 'A Nice Code block'
+4. Search for 'PrettyCode'
 
 == Frequently Asked Questions ==
 
@@ -31,7 +31,7 @@ All major language are available: HTML, CSS, JS, JSX, Stylus, Sass, PHP, Python,
 
 = Can I add more languages ? =
 
-Yes, by using the filter `a_nice_code_block_languages_list`.
+Yes, by using the filter `prettycode_languages_list`.
 
 = Can I customize the appearance? =
 
@@ -39,7 +39,7 @@ Sure! You have access to 50+ dark and light themes like Base16, Monokai, Materia
 
 = Can I contribute? =
 
-Yep! The public repository is right here: https://github.com/maximebj/codeblock.plugin
+Yep! The public repository is right here: https://github.com/maximebj/prettycode.plugin
 
 == Screenshots ==
 

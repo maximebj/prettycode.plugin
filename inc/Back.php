@@ -1,10 +1,9 @@
 <?php
 
-namespace ANiceBlockCode;
+namespace PrettyCode;
 
-use ANiceBlockCode\Languages;
-use ANiceBlockCode\Plugin;
-use ANiceBlockCode\Themes;
+use PrettyCode\Languages;
+use PrettyCode\Themes;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -31,7 +30,7 @@ class Back
 	{
 		wp_localize_script(
 			'wp-block-editor',
-			'aNiceCodeBlock',
+			'prettyCode',
 			[
 				'themes' => Themes::getThemesList(),
 				'languages' => Languages::getLanguagesList(),

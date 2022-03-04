@@ -1,9 +1,9 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 2,
-	"name": "a-nice-code-block/code-block",
+	"name": "prettycode/code",
 	"version": "1.0",
-	"title": "A Nice Code Block",
+	"title": "PrettyCode",
 	"category": "text",
 	"icon": "media-code",
 	"description": "A code syntax highlighting block for your snippets of all major languages.",
@@ -11,7 +11,7 @@
 		"html": false,
 		"align": true
 	},
-	"textdomain": "a-nice-code-block",
+	"textdomain": "prettycode",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css"

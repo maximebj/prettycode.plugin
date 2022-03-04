@@ -10,38 +10,38 @@ export default function Inspector( props ) {
 	return (
 		<InspectorControls>
 
-      <PanelBody title={ __('Settings', 'a-nice-code-block') }>
+      <PanelBody title={ __('Settings', 'prettycode') }>
 
 				<SelectControl
 					value={ language }
-					label={ __('Language', 'a-nice-code-block') }
-					options={ aNiceCodeBlock.languages }
+					label={ __('Language', 'prettycode') }
+					options={ prettyCode.languages }
 					onChange={ ( language ) => setAttributes( { language } )  }
 				/>
 
 				<SelectControl
 					value={ theme }
-					label={ __('Theme', 'a-nice-code-block') }
-					options={ aNiceCodeBlock.themes }
+					label={ __('Theme', 'prettycode') }
+					options={ prettyCode.themes }
 					onChange={ ( theme ) => setAttributes( { theme } )  }
 				/>
 
 				<TextControl
 					type="text"
-					label={ __('File name', 'a-nice-code-block') }
+					label={ __('File name', 'prettycode') }
 					onChange={ file => setAttributes( { file } ) }
-					placeHolder={ __('/my/optionnal/file/name.ext', 'a-nice-code-block') }
+					placeHolder={ __('/my/optionnal/file/name.ext', 'prettycode') }
 					value={ file }
 				/>
 
 				<ToggleControl
-					label={ __('Auto wrap long lines', 'a-nice-code-block') }
+					label={ __('Auto wrap long lines', 'prettycode') }
 					checked={ wrapLines }
 					onChange={ () => setAttributes( { wrapLines: ! wrapLines } ) }
 				/>
 
 				<ToggleControl
-					label={ __('Show lines numbers', 'a-nice-code-block') }
+					label={ __('Show lines numbers', 'prettycode') }
 					checked={ showLines }
 					onChange={ () => setAttributes( { showLines: ! showLines } ) }
 				/>
@@ -49,10 +49,10 @@ export default function Inspector( props ) {
 				{ showLines && (
 					<TextControl
 						type="number"
-						label={ __('Start line', 'a-nice-code-block') }
+						label={ __('Start line', 'prettycode') }
 						onChange={ startLine => setAttributes( { startLine: parseInt(startLine) } ) }
 						value={ startLine }
-						className='ancb-small-input'
+						className='prettycode-small-input'
 						min="1"
 					/>
 				) }

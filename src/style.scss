@@ -1,4 +1,4 @@
-.wp-block-a-nice-code-block-code-block {
+.wp-block-prettycode-code {
   border-radius: 6px;
   overflow: hidden;
   margin: 3em 0;
@@ -24,11 +24,11 @@
   }
 }
 
-.ancb-header {
+.prettycode-header {
   display: flex;
 }
 
-.ancb-lang {
+.prettycode-lang {
 	position: relative;
   min-width: 80px;
 	padding: 0 6px 0 16px;
@@ -68,7 +68,7 @@
   &.is-lang-swift  { background: #FE5E2F; }
 }
 
-.ancb-file {
+.prettycode-file {
   flex: auto;
   background: #2F3344;
   color: #abb2bf;

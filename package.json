@@ -1,8 +1,8 @@
 {
-	"name": "code-block",
-	"version": "0.1.0",
-	"description": "Example block written with ESNext standard and JSX support – build step required.",
-	"author": "The WordPress Contributors",
+	"name": "prettycode",
+	"version": "1.0",
+	"description": "A code syntax highlighting block for your snippets of all major languages.",
+	"author": "Maxime BJ • Captain WP",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"scripts": {

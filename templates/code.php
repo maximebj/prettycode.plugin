@@ -1,14 +1,14 @@
-<div class="wp-block-a-nice-code-block-code-block <?php echo $align; ?> <?php echo $customClass; ?>">
-  <header class="ancb-header">
-    <div class="ancb-lang is-lang-<?php echo $lang_slug; ?>">
+<div class="wp-block-prettycode-code <?php echo $align; ?> <?php echo $customClass; ?>">
+  <header class="prettycode-header">
+    <div class="prettycode-lang is-lang-<?php echo $lang_slug; ?>">
       <?php echo $lang_label; ?>
     </div>
-    <div class="ancb-file">
+    <div class="prettycode-file">
       <?php echo $file; ?>
     </div>
   </header>
   <textarea
-    class="ancb-source"
+    class="prettycode-source"
     name="codemirror-<?php echo $uid; ?>"
     id="codemirror-<?php echo $uid; ?>"
   ><?php echo esc_html( $source ); ?></textarea>

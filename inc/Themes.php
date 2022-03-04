@@ -1,6 +1,6 @@
 <?php
 
-namespace ANiceBlockCode;
+namespace PrettyCode;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -71,7 +71,6 @@ Abstract class Themes
 			[ 'value' => 'zenburn' , 'label' => 'Zenburn' ],
 		];
 
-		return apply_filters( 'a_nice_code_block_themes_list', $themes );
+		return apply_filters( 'prettycode_themes_list', $themes );
 	}
-
 }
