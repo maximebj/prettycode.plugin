@@ -1,4 +1,4 @@
-=== Code Block ===
+=== PrettyCode ===
 Contributors:      Maxime BJ
 Tags:              block
 Tested up to:      5.9
