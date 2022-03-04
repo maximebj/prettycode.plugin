@@ -101,10 +101,16 @@ class Front
 		}
 
 		## Then: load dependencies according to languages used
+		$language_list = Languages::getLanguagesList();
 		foreach( $languages as $language ) {
+
+			# Search mode from language
+			$key = array_search( $language, array_column( $language_list, 'value' ) );
+			$mode = $language_list[$key]['mode'];
+
 			wp_enqueue_script(
-				Plugin::SLUG . "-code-mirror-mode-$language",
-				Plugin::URL() . "codemirror/modes/$language/$language.js",
+				Plugin::SLUG . "-code-mirror-mode-$mode",
+				Plugin::URL() . "codemirror/modes/$mode/$mode.js",
 				[ Plugin::SLUG . "-code-mirror" ],
 				Plugin::VERSION
 			);
