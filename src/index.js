@@ -1,4 +1,4 @@
-import { registerBlockType } from '@wordpress/blocks'
+import { registerBlockType, createBlock } from '@wordpress/blocks'
 
 import './style.scss'
 
@@ -38,4 +38,17 @@ registerBlockType('prettycode/code', {
 	},
 	edit: Edit,
 	save: Save,
+	transforms: {
+    from: [
+			{
+				type: 'block',
+				blocks: [ 'core/code' ],
+				transform: ( { content } ) => {
+					return createBlock( 'prettycode/code', {
+						source: _.unescape(content),
+					} );
+				},
+			},
+    ]
+	},
 })
