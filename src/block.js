@@ -19,7 +19,7 @@ export default function Block( props ) {
 
 	return (
 		<div {...useBlockProps()}>
-			<link rel='stylesheet' href={ `../wp-content/plugins/prettycode/codemirror/themes/${theme}.css` } type='text/css' />
+			<link rel='stylesheet' href={ `${prettyCode.url}vendor/codemirror/themes/${theme}.css` } type='text/css' />
 			<header className="prettycode-header">
 				<div className={ `prettycode-lang is-lang-${languageObject.value}` }>
 					{ languageObject.label }

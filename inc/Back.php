@@ -4,6 +4,7 @@ namespace PrettyCode;
 
 use PrettyCode\Languages;
 use PrettyCode\Themes;
+use PrettyCode\Plugin;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -32,6 +33,7 @@ class Back
 			'wp-block-editor',
 			'prettyCode',
 			[
+				'url' => Plugin::URL(),
 				'themes' => Themes::getThemesList(),
 				'languages' => Languages::getLanguagesList(),
 			],
