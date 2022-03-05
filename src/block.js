@@ -22,7 +22,7 @@ export default function Block( props ) {
 			<link rel='stylesheet' href={ `${prettyCode.url}vendor/codemirror/themes/${theme}.css` } type='text/css' />
 			<header className="prettycode-header">
 				<div className={ `prettycode-lang is-lang-${languageObject.value}` }>
-					{ languageObject.label }
+					{languageObject.label}
 				</div>
 				<div className="prettycode-file">
 					{file}
@@ -31,7 +31,7 @@ export default function Block( props ) {
 
 			<CodeMirror
 				value={source}
-				onBeforeChange={(editor, data, source) => setAttributes( { source } ) }
+				onBeforeChange={(editor, data, source) => setAttributes( { source } )}
 				options={{
 					lineNumbers: showLines,
 					theme: theme,
