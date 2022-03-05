@@ -17,12 +17,12 @@
       mode: '<?php echo esc_attr( $lang_mime ?: $lang_mode ); ?>',
       readOnly: true,
       theme: '<?php echo esc_attr( $theme ); ?>',
-      lineNumbers: <?php echo ( $showLines ) ? 'true' : 'false'; ?>,
+      lineNumbers: <?php echo ( esc_attr( $showLines ) ) ? 'true' : 'false'; ?>,
       firstLineNumber: <?php echo esc_attr( $startLine ); ?>,
       matchBrackets: true,
       indentUnit: 4,
       tabSize: 4,
-      lineWrapping: <?php echo ( $wrapLines ) ? 'true' : 'false'; ?>,
+      lineWrapping: <?php echo ( esc_attr( $wrapLines ) ) ? 'true' : 'false'; ?>,
     } );
   </script>
 </div>
