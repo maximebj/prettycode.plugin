@@ -59,7 +59,7 @@ class Front
 		# CodeMirror Stylesheet
 		wp_enqueue_style(
 			Plugin::SLUG . '-code-mirror',
-			Plugin::URL() . 'codemirror/codemirror.css',
+			Plugin::URL() . 'vendor/codemirror/codemirror.css',
 			[],
 			Plugin::VERSION
 		);
@@ -68,7 +68,7 @@ class Front
 		foreach( $themes as $theme ) {
 			wp_enqueue_style(
 				Plugin::SLUG . "-code-mirror-theme-$theme",
-				Plugin::URL() . "codemirror/themes/$theme.css",
+				Plugin::URL() . "vendor/codemirror/themes/$theme.css",
 				[ Plugin::SLUG . '-code-mirror' ],
 				Plugin::VERSION
 			);
@@ -77,14 +77,14 @@ class Front
 		# CodeMirror Scripts and Add-ons
 		wp_enqueue_script(
 			Plugin::SLUG . '-code-mirror',
-			Plugin::URL() . 'codemirror/codemirror.js',
+			Plugin::URL() . 'vendor/codemirror/codemirror.js',
 			[],
 			Plugin::VERSION
 		);
 
 		wp_enqueue_script(
 			Plugin::SLUG . '-code-mirror-matchbrackets',
-			Plugin::URL() . 'codemirror/addons/edit/matchbrackets.js',
+			Plugin::URL() . 'vendor/codemirror/addons/edit/matchbrackets.js',
 			[ Plugin::SLUG . '-code-mirror' ],
 			Plugin::VERSION
 		);
@@ -94,7 +94,7 @@ class Front
 		if( count( array_intersect( ['rust'] , $languages ) ) > 0 ) {
 			wp_enqueue_script(
 				Plugin::SLUG . '-code-mirror-simplemode',
-				Plugin::URL() . 'codemirror/addons/mode/simple.js',
+				Plugin::URL() . 'vendor/codemirror/addons/mode/simple.js',
 				[ Plugin::SLUG . '-code-mirror' ],
 				Plugin::VERSION
 			);
@@ -110,7 +110,7 @@ class Front
 
 			wp_enqueue_script(
 				Plugin::SLUG . "-code-mirror-mode-$mode",
-				Plugin::URL() . "codemirror/modes/$mode/$mode.js",
+				Plugin::URL() . "vendor/codemirror/modes/$mode/$mode.js",
 				[ Plugin::SLUG . "-code-mirror" ],
 				Plugin::VERSION
 			);
@@ -121,7 +121,7 @@ class Front
 		if ( count( array_intersect( ['php'] , $languages ) ) > 0 ) {
 			wp_enqueue_script(
 				Plugin::SLUG . '-code-mirror-clike',
-				Plugin::URL() . 'codemirror/modes/clike/clike.js',
+				Plugin::URL() . 'vendor/codemirror/modes/clike/clike.js',
 				[ Plugin::SLUG . '-code-mirror' ],
 				Plugin::VERSION
 			);
@@ -131,21 +131,21 @@ class Front
 		if( count( array_intersect( ['php', 'xml', 'twig', 'javascript', 'jsx'] , $languages ) ) > 0 ) {
 			wp_enqueue_script(
 				Plugin::SLUG . '-code-mirror-htmlmixed',
-				Plugin::URL() . 'codemirror/modes/htmlmixed/htmlmixed.js',
+				Plugin::URL() . 'vendor/codemirror/modes/htmlmixed/htmlmixed.js',
 				[ Plugin::SLUG . '-code-mirror' ],
 				Plugin::VERSION
 			);
 
 			wp_enqueue_script(
 				Plugin::SLUG . '-code-mirror-css',
-				Plugin::URL() . 'codemirror/modes/css/css.js',
+				Plugin::URL() . 'vendor/codemirror/modes/css/css.js',
 				[ Plugin::SLUG . '-code-mirror' ],
 				Plugin::VERSION
 			);
 
 			wp_enqueue_script(
 				Plugin::SLUG . '-code-mirror-javascript',
-				Plugin::URL() . 'codemirror/modes/javascript/javascript.js',
+				Plugin::URL() . 'vendor/codemirror/modes/javascript/javascript.js',
 				[ Plugin::SLUG . '-code-mirror' ],
 				Plugin::VERSION
 			);

@@ -46,7 +46,7 @@ registerBlockType('prettycode/code', {
 				transform: ( { content } ) => {
 					return createBlock( 'prettycode/code', {
 						source: _.unescape(content),
-					} );
+					} )
 				},
 			},
     ]
