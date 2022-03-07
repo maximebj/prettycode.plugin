@@ -20,12 +20,12 @@ class PrettyCode
 	public function run()
 	{
 		# Load Files
-		require_once __DIR__ . '/inc/Plugin.php';
-		require_once __DIR__ . '/inc/Languages.php';
-		require_once __DIR__ . '/inc/Themes.php';
-		require_once __DIR__ . '/inc/Back.php';
-		require_once __DIR__ . '/inc/Front.php';
-		require_once __DIR__ . '/inc/Block.php';
+		require_once __DIR__ . '/classes/Plugin.php';
+		require_once __DIR__ . '/classes/Languages.php';
+		require_once __DIR__ . '/classes/Themes.php';
+		require_once __DIR__ . '/classes/Back.php';
+		require_once __DIR__ . '/classes/Front.php';
+		require_once __DIR__ . '/classes/Block.php';
 
 		# Init Classes
 		(new PrettyCode\Back)->registerHooks();

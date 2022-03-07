@@ -33,7 +33,7 @@ class Block
 	{
 		# Register Code Block
 		register_block_type(
-      Plugin::path() . '/build',
+      Plugin::path() . 'build',
       [
 				'render_callback' => [ $this, 'renderBlock' ]
 			]
