@@ -60,5 +60,5 @@ export default function Inspector( props ) {
 			</PanelBody>
 
 		</InspectorControls>
-	);
+	)
 }
