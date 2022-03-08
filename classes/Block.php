@@ -17,6 +17,7 @@ class Block
 	public function registerHooks(): void
 	{
 		add_action( 'init', [ $this, 'registerBlock' ] );
+		add_action( 'init', [ $this, 'registerTranslations' ] );
 	}
 
 
@@ -38,6 +39,18 @@ class Block
 				'render_callback' => [ $this, 'renderBlock' ]
 			]
     );
+	}
+
+
+	/**
+   * Registrer Translations
+	 *
+	 * @return void
+	 */
+	public function registerTranslations(): void
+	{
+		# Register Code Block
+		wp_set_script_translations( 'prettycode-script', Plugin::SLUG );
 	}
 
 
