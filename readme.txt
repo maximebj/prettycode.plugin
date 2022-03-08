@@ -2,7 +2,7 @@
 Contributors:      Maxime BJ
 Tags:              block
 Tested up to:      5.9
-Stable tag:        1.0.1
+Stable tag:        1.0.2
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,7 +45,7 @@ Yep! The public repository is right here: https://github.com/maximebj/prettycode
 
 == Changelog ==
 
-= 1.0.1 =
+= 1.0.2 =
 * Added translation for JS files
 
 = 1.0 =
