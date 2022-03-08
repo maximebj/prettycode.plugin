@@ -1,4 +1,4 @@
-=== PrettyCode ===
+=== PrettyCode • Code syntax highlighting with CodeMirror ===
 Contributors:      Maxime BJ
 Tags:              block
 Tested up to:      5.9
@@ -6,7 +6,7 @@ Stable tag:        1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Code highlighting made simple, for the WordPress editor.
+A simple block to highlight code with 20+ languages and 50+ themes, for the WordPress editor.
 
 == Description ==
 
