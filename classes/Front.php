@@ -130,6 +130,13 @@ class Front
 		### Front End mixed
 		if( count( array_intersect( ['php', 'xml', 'twig', 'javascript', 'jsx'] , $languages ) ) > 0 ) {
 			wp_enqueue_script(
+				Plugin::SLUG . '-code-mirror-xml',
+				Plugin::URL() . 'vendor/codemirror/modes/xml/xml.js',
+				[ Plugin::SLUG . '-code-mirror' ],
+				Plugin::VERSION
+			);
+
+			wp_enqueue_script(
 				Plugin::SLUG . '-code-mirror-htmlmixed',
 				Plugin::URL() . 'vendor/codemirror/modes/htmlmixed/htmlmixed.js',
 				[ Plugin::SLUG . '-code-mirror' ],
