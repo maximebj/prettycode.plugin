@@ -50,7 +50,7 @@ class Block
 	public function registerTranslations(): void
 	{
 		# Register Code Block
-		wp_set_script_translations( 'prettycode-script', Plugin::SLUG );
+		wp_set_script_translations( 'prettycode-code-editor-script-js', Plugin::SLUG );
 	}
 
 
