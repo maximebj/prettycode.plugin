@@ -7,7 +7,7 @@ defined( 'ABSPATH' ) || exit;
 abstract class Plugin
 {
 	const SLUG    = 'prettycode';
-  const VERSION = '1.0.3';
+  const VERSION = '1.0.4';
 
 	/**
    * Get Plugin path to directory
