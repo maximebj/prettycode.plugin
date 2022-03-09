@@ -1,53 +1,5 @@
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/codemirror/mode/tiddlywiki/tiddlywiki.css ***!
-  \************************************************************************************************************************************************************************************************************/
-span.cm-underlined {
-  text-decoration: underline;
-}
-span.cm-strikethrough {
-  text-decoration: line-through;
-}
-span.cm-brace {
-  color: #170;
-  font-weight: bold;
-}
-span.cm-table {
-  color: blue;
-  font-weight: bold;
-}
-
-/*!************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./node_modules/codemirror/mode/tiki/tiki.css ***!
-  \************************************************************************************************************************************************************************************************/
-.cm-tw-syntaxerror {
-	color: #FFF;
-	background-color: #900;
-}
-
-.cm-tw-deleted {
-	text-decoration: line-through;
-}
-
-.cm-tw-header5 {
-	font-weight: bold;
-}
-.cm-tw-listitem:first-child { /*Added first child to fix duplicate padding when highlighting*/
-	padding-left: 10px;
-}
-
-.cm-tw-box {
-	border-top-width: 0px !important;
-	border-style: solid;
-	border-width: 1px;
-	border-color: inherit;
-}
-
-.cm-tw-underline {
-	text-decoration: underline;
-}
-/*!****************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./vendor/codemirror/codemirror.css ***!
-  \****************************************************************************************************************/
+span.cm-underlined{text-decoration:underline}span.cm-strikethrough{text-decoration:line-through}span.cm-brace{color:#170;font-weight:700}span.cm-table{color:blue;font-weight:700}
+.cm-tw-syntaxerror{background-color:#900;color:#fff}.cm-tw-deleted{text-decoration:line-through}.cm-tw-header5{font-weight:700}.cm-tw-listitem:first-child{padding-left:10px}.cm-tw-box{border-top-width:0!important;border:1px solid;border-color:inherit}.cm-tw-underline{text-decoration:underline}
 /* BASICS */
 
 .CodeMirror {
@@ -395,19 +347,4 @@ div.CodeMirror-dragcursors {
 /* Help users use markselection to safely style text background */
 span.CodeMirror-selectedtext { background: none; }
 
-/*!****************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
-  \****************************************************************************************************************************************************************************************************************************************/
-.CodeMirror-scroll {
-  overflow: initial !important;
-}
-
-.wp-block[data-align=full] .wp-block-prettycode-code {
-  border-radius: 0;
-}
-
-.prettycode-small-input {
-  width: 80px;
-}
-
-/*# sourceMappingURL=index.css.map*/
+.CodeMirror-scroll{overflow:initial!important}.wp-block[data-align=full] .wp-block-prettycode-code{border-radius:0}.prettycode-small-input{width:80px}
