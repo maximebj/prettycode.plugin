@@ -5,8 +5,8 @@
  * Description:       Code snippets highlighting made simple, for the WordPress editor.
  * Requires at least: 5.8
  * Requires PHP:      7.0
- * Version:           1.0.7
- * Author:            Maxime BJ • Captain WP
+ * Version:           1.1
+ * Author:            Maxime BJ • Capitaine WP
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       prettycode
