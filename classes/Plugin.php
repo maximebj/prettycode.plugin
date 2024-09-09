@@ -2,31 +2,31 @@
 
 namespace PrettyCode;
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 abstract class Plugin
 {
 	const SLUG    = 'prettycode';
-  const VERSION = '1.0.7';
+	const VERSION = '1.1.0';
 
 	/**
-   * Get Plugin path to directory
+	 * Get Plugin path to directory
 	 *
 	 * @return string
 	 */
 	public static function path(): string
 	{
-		return plugin_dir_path( __DIR__ );
+		return plugin_dir_path(__DIR__);
 	}
 
 
 	/**
-   * Get Plugin URL to directory
+	 * Get Plugin URL to directory
 	 *
 	 * @return string
 	 */
 	public static function URL(): string
 	{
-		return plugin_dir_url( __DIR__ );
+		return plugin_dir_url(__DIR__);
 	}
 }
