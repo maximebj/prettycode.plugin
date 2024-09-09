@@ -1,18 +1,17 @@
-import { Fragment } from '@wordpress/element'
+import { Fragment } from "@wordpress/element"
 
-import Inspector from './inspector'
-import Block from './block'
+import Inspector from "./inspector"
+import Block from "./block"
 
-import './editor.scss'
+import "./editor.scss"
 
-export default function Edit( props ) {
+export default function Edit(props) {
+  const { attributes, setAttributes } = props
 
-	const { attributes, setAttributes } = props
-
-	return (
-		<Fragment>
-			<Inspector { ...{ attributes, setAttributes } } />
-			<Block { ...{ attributes, setAttributes } } />
-		</Fragment>
-	);
+  return (
+    <Fragment>
+      <Inspector {...{ attributes, setAttributes }} />
+      <Block {...{ attributes, setAttributes }} />
+    </Fragment>
+  )
 }

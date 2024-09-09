@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin Name:       PrettyCode • Syntax highlighting with CodeMirror
  * Description:       Code snippets highlighting made simple, for the WordPress editor.
@@ -13,7 +14,7 @@
  * @package           create-block
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 class PrettyCode
 {

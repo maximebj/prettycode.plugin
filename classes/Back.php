@@ -6,24 +6,24 @@ use PrettyCode\Languages;
 use PrettyCode\Themes;
 use PrettyCode\Plugin;
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 class Back
 {
 	/**
-   * Registrer Hooks
+	 * Registrer Hooks
 	 *
 	 * @return void
 	 */
 	public function registerHooks(): void
 	{
-		add_action( 'enqueue_block_editor_assets', [ $this, 'sentDataToJS' ] );
-		add_filter( 'no_texturize_tags', [ $this, 'doNotTexturizeTags' ] );
+		add_action('enqueue_block_editor_assets', [$this, 'sentDataToJS']);
+		add_filter('no_texturize_tags', [$this, 'doNotTexturizeTags']);
 	}
 
 
 	/**
-   * Send data from PHP to JS
+	 * Send data from PHP to JS
 	 *
 	 * @return void
 	 */
@@ -42,13 +42,13 @@ class Back
 
 
 	/**
-   * Avoid issues with tags texturization in code
+	 * Avoid issues with tags texturization in code
 	 *
 	 * Eg: when writing --checkout in a code snippet
 	 *
 	 * @return array
 	 */
-	public function doNotTexturizeTags( $tags ): array
+	public function doNotTexturizeTags($tags): array
 	{
 		$tags[] = 'textarea';
 		return $tags;
