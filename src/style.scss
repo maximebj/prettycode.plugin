@@ -90,24 +90,7 @@
 }
 
 .wp-block-prettycode-code {
-  // CM5 – frontend read-only rendering (code.php + vendor codemirror.js)
-  .CodeMirror {
-    height: auto;
-
-    pre {
-      font-size: 14px;
-      line-height: 20px;
-      padding: 2px 10px;
-    }
-  }
-
-  .CodeMirror-linenumber {
-    font-size: 12px;
-    line-height: 20px;
-    padding: 2px 8px;
-  }
-
-  // CM6 – block editor (React / @uiw/react-codemirror)
+  // CM6 – editor and frontend both use @codemirror/view
   .cm-editor {
     .cm-content {
       font-size: 14px;

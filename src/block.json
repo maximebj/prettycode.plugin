@@ -18,6 +18,7 @@
   },
   "textdomain": "prettycode",
   "editorScript": "file:./index.js",
+  "viewScript": "file:./front.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css"
 }

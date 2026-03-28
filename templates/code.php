@@ -7,21 +7,14 @@
       <?php echo esc_html($file); ?>
     </div>
   </header>
-  <textarea
-    class="prettycode-source"
-    name="codemirror-<?php echo esc_attr($uid); ?>"
-    id="codemirror-<?php echo esc_attr($uid); ?>"><?php echo esc_html(str_replace('-', '&#45;', $source)); ?></textarea>
-  <script>
-    CodeMirror.fromTextArea(document.getElementById('codemirror-<?php echo esc_attr($uid); ?>'), {
-      mode: '<?php echo esc_attr($lang_mime ?: $lang_mode); ?>',
-      readOnly: true,
-      theme: '<?php echo esc_attr($theme); ?>',
-      lineNumbers: <?php echo (esc_attr($showLines)) ? 'true' : 'false'; ?>,
-      firstLineNumber: <?php echo esc_attr($startLine); ?>,
-      matchBrackets: true,
-      indentUnit: 4,
-      tabSize: 4,
-      lineWrapping: <?php echo (esc_attr($wrapLines)) ? 'true' : 'false'; ?>,
-    });
-  </script>
+  <div class="prettycode-editor">
+    <script type="application/json" class="prettycode-data"><?php echo wp_json_encode([
+      'source'    => $source,
+      'mode'      => $lang_mode,
+      'theme'     => $theme,
+      'showLines' => (bool) $showLines,
+      'startLine' => (int) $startLine,
+      'wrapLines' => (bool) $wrapLines,
+    ]); ?></script>
+  </div>
 </div>

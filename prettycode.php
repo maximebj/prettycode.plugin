@@ -24,12 +24,10 @@ class PrettyCode
 		require_once __DIR__ . '/classes/Languages.php';
 		require_once __DIR__ . '/classes/Themes.php';
 		require_once __DIR__ . '/classes/Back.php';
-		require_once __DIR__ . '/classes/Front.php';
 		require_once __DIR__ . '/classes/Block.php';
 
 		# Init Classes
 		(new PrettyCode\Back)->registerHooks();
-		(new PrettyCode\Front)->registerHooks();
 		(new PrettyCode\Block)->registerHooks();
 	}
 }
