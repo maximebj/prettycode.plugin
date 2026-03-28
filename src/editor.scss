@@ -7,3 +7,18 @@
 .prettycode-small-input {
   width: 80px;
 }
+
+// CodeMirror editor
+.wp-block-prettycode-code {
+  .cm-editor {
+    // Code content
+    .cm-content {
+      font-size: 15px;
+    }
+
+    // Line numbers
+    .cm-gutterElement {
+      font-size: 15px;
+    }
+  }
+}
