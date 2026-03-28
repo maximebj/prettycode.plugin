@@ -5,13 +5,12 @@
  * Description:       Code snippets highlighting made simple, for the WordPress editor.
  * Requires at least: 5.8
  * Requires PHP:      7.0
- * Version:           1.1
+ * Version:           2.0
  * Author:            Maxime BJ • Capitaine WP
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       prettycode
  *
- * @package           create-block
  */
 
 defined('ABSPATH') || exit;

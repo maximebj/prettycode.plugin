@@ -2,7 +2,7 @@
 Contributors:      Maxime BJ
 Tags:              block
 Tested up to:      5.9
-Stable tag:        1.0.7
+Stable tag:        2.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,11 @@ Yep! The public repository is right here: https://github.com/maximebj/prettycode
 == Screenshots ==
 
 == Changelog ==
+
+= 2.0 =
+* Upgraded to CodeMirror 6
+* Updated blockAPI version to 3
+* Fixed bugs
 
 = 1.0.7 =
 * Fixed code editor line height

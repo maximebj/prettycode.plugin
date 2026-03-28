@@ -7,24 +7,16 @@
     border-radius: 0;
   }
 
-  .CodeMirror {
-    height: auto;
-
-    pre {
-      font-size: 16px;
-      line-height: 20px;
-      padding: 2px 10px;
+  .cm-editor {
+    // Code content
+    .cm-content {
+      font-size: 15px;
     }
-  }
 
-  .CodeMirror-linenumber {
-    font-size: 13px;
-    line-height: 20px;
-    padding: 2px 4px;
-  }
-
-  .CodeMirror-styled-background {
-    background-color: rgba(255, 255, 117, 0.1);
+    // Line numbers
+    .cm-gutterElement {
+      font-size: 14px;
+    }
   }
 }
 
