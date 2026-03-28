@@ -90,22 +90,13 @@
 }
 
 .wp-block-prettycode-code {
-  // CM6 – editor and frontend both use @codemirror/view
   .cm-editor {
     .cm-content {
-      font-size: 14px;
-      line-height: 20px;
-      padding: 2px 10px;
-    }
-
-    .cm-lineNumbers {
-      min-width: 3em;
+      font-size: 15px;
     }
 
     .cm-gutterElement {
-      font-size: 12px;
-      line-height: 20px;
-      padding: 2px 8px;
+      font-size: 15px;
     }
   }
 }
