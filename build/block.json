@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "prettycode/code",
+  "version": "2.0",
+  "title": "PrettyCode",
+  "category": "text",
+  "icon": "media-code",
+  "description": "A code syntax highlighting block for your snippets of all major languages.",
+  "keywords": [
+    "code",
+    "syntax",
+    "highlight"
+  ],
+  "supports": {
+    "html": false,
+    "align": true
+  },
+  "textdomain": "prettycode",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./front.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
